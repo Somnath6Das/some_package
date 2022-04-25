@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:some_packages/Stream%20Controller%20n%20Broadcast/stream_broadcast_home.dart';
-import 'package:some_packages/http.dart';
-import 'package:some_packages/json%20serial-deserial/app_state.dart';
-import 'package:some_packages/json%20serial-deserial/home_json.dart';
-import 'package:some_packages/shared_preferences.dart';
-import 'package:some_packages/Stream%20Controller%20n%20Broadcast/stream_contro_home.dart';
+import 'package:some_packages/app_life_cycle_home.dart';
+import 'package:some_packages/json serial-deserial/app_state.dart';
+import 'package:some_packages/stateful_builderHome.dart';
+import 'Stream Controller n Broadcast/stream_broadcast_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,9 +24,12 @@ class MyApp extends StatelessWidget {
         ),
         // home: SharedPrefsHome(),
         //  home:HttpHome()
-       // home: HomeJson(),
+        // home: HomeJson(),
         //home: StreamControHome(),
-        home: StreamBroadcastHome(),
+        //home: StreamBroadcastHome(),
+        // home: StreamBroadcastHome(),
+        //home: StatefulBuilderHome(),
+        home: AppLifeCycleHome(),
       ),
     );
   }

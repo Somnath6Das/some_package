@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class StreamBroadcastHome extends StatefulWidget {
-  StreamBroadcastHome({Key? key}) : super(key: key);
+  const StreamBroadcastHome({Key? key}) : super(key: key);
 
   @override
   State<StreamBroadcastHome> createState() => _StreamBroadcastHomeState();
@@ -11,10 +11,13 @@ class StreamBroadcastHome extends StatefulWidget {
 
 class _StreamBroadcastHomeState extends State<StreamBroadcastHome> {
   int counter = 0;
+
+  //first stream controller.
   StreamController<int> singleStream = StreamController<int>();
   late Stream MultipleStream;
 
   int counterOne = 0;
+  //second stream controller
   StreamController<int> StreamOne = StreamController<int>();
   late Stream MultipleStreamOne;
 
@@ -32,7 +35,6 @@ class _StreamBroadcastHomeState extends State<StreamBroadcastHome> {
           child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-        
           children: [
             StreamBuilder(
                 stream: MultipleStream,
@@ -40,13 +42,13 @@ class _StreamBroadcastHomeState extends State<StreamBroadcastHome> {
                   if (snapshot.hasData) {
                     return Text(
                       snapshot.data.toString(),
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 100,
                           color: Colors.green,
                           fontWeight: FontWeight.bold),
                     );
                   } else {
-                    return Text(
+                    return const Text(
                       "Snapshot has no data!",
                       style: TextStyle(
                           fontSize: 40,
@@ -61,7 +63,7 @@ class _StreamBroadcastHomeState extends State<StreamBroadcastHome> {
                   if (snapshot.hasData) {
                     return Text(
                       snapshot.data.toString(),
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 100,
                           color: Colors.red,
                           fontWeight: FontWeight.bold),
@@ -80,18 +82,20 @@ class _StreamBroadcastHomeState extends State<StreamBroadcastHome> {
                 onPressed: () {
                   counter--;
                   StreamOne.sink.add(counter);
-                },style: ElevatedButton.styleFrom(primary: Colors.red),
+                },
+                style: ElevatedButton.styleFrom(primary: Colors.red),
                 child: const Icon(Icons.drag_handle))
           ],
         ),
       )),
-      floatingActionButton: FloatingActionButton(backgroundColor: Colors.green,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
         onPressed: () {
           counter++;
 
           singleStream.sink.add(counter);
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

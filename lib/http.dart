@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class HttpHome extends StatefulWidget {
-  HttpHome({Key? key}) : super(key: key);
+  const HttpHome({Key? key}) : super(key: key);
 
   @override
   State<HttpHome> createState() => _HttpHomeState();

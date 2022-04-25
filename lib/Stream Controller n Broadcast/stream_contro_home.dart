@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class StreamControHome extends StatefulWidget {
-  StreamControHome({Key? key}) : super(key: key);
+  const StreamControHome({Key? key}) : super(key: key);
 
   @override
   State<StreamControHome> createState() => _StreamControHomeState();
@@ -45,7 +45,7 @@ class _StreamControHomeState extends State<StreamControHome> {
           counter++;
           counterController.sink.add(counter);
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

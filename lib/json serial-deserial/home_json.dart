@@ -6,7 +6,7 @@ import 'package:some_packages/json%20serial-deserial/app_state.dart';
 import 'package:some_packages/json%20serial-deserial/model.dart';
 
 class HomeJson extends StatefulWidget {
-  HomeJson({Key? key}) : super(key: key);
+  const HomeJson({Key? key}) : super(key: key);
 
   @override
   State<HomeJson> createState() => _HomeJsonState();
@@ -28,12 +28,12 @@ class _HomeJsonState extends State<HomeJson> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
                   provider.temp,
-                  style: TextStyle(fontSize: 25),
+                  style: const TextStyle(fontSize: 25),
                 )),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(

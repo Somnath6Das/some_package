@@ -9,7 +9,7 @@ class SharedPrefsHome extends StatefulWidget {
 }
 
 class _SharedPrefsHomeState extends State<SharedPrefsHome> {
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   void saveText(String text) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
