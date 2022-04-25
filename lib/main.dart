@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:some_packages/app_life_cycle_home.dart';
+import 'package:some_packages/data%20pass%20between%20screens/pass_data_home.dart';
 import 'package:some_packages/json serial-deserial/app_state.dart';
 import 'package:some_packages/stateful_builderHome.dart';
 import 'Stream Controller n Broadcast/stream_broadcast_home.dart';
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
         //home: StreamBroadcastHome(),
         // home: StreamBroadcastHome(),
         //home: StatefulBuilderHome(),
-        home: AppLifeCycleHome(),
+        //home: AppLifeCycleHome(),
+        home: PassDataHome(),
       ),
     );
   }
