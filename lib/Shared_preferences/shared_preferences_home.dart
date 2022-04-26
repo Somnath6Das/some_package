@@ -9,6 +9,8 @@ class SharedPrefsHome extends StatefulWidget {
 }
 
 class _SharedPrefsHomeState extends State<SharedPrefsHome> {
+
+  //Text field save data and the data appeare when app start.
   final TextEditingController _controller = TextEditingController();
 
   void saveText(String text) async {
@@ -38,7 +40,6 @@ class _SharedPrefsHomeState extends State<SharedPrefsHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Container(
         child: Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -49,7 +50,7 @@ class _SharedPrefsHomeState extends State<SharedPrefsHome> {
           },
         ),
             )),
-      )),
+      ),
     );
   }
 }
